@@ -1,0 +1,86 @@
+@mixin btn-base {
+    padding: 0.25rem 1rem;
+    border-radius: 0.50rem;
+}
+
+$color-main: #7562E0;
+$color-sec: #2A2D43;
+$color-thr: #414361;
+$color-placeholder: #93939A;
+.btn-main {
+    @include btn-base();
+    background-color: $color-main;
+    border: 2px solid $color-main;
+    color: white;
+    &:hover {
+        background-color: $color-sec;
+        border: 2px solid $color-main;
+        color: white;
+    }
+}
+.btn-sec {
+    @include btn-base();
+    @extend .btn-main;
+}
+.main-menu {
+    margin-bottom: 0;
+    li {
+        list-style: none;
+        display: inline;
+        font-size: 1.4rem;
+        margin-right: 3.5rem;
+        color: white;
+        font-style: oblique;
+        &:hover {
+            color: $color-main;
+        }
+    }
+}
+a {
+    &:hover {
+        opacity: 1;
+    }
+}
+.icon-b {
+    color: #6E2CF2;
+}
+.icon-h {
+    color: #F64A1D;
+}
+.icon-c {
+    color: #2862E9;
+}
+.icon-s {
+    color: #CF649A;
+}
+.i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    &:hover {
+        color: $color-main;
+    }
+}
+.input-text {
+    margin: 1rem 0;
+    width: 100%;
+    border: 1px solid $color-thr;
+    background-color: $color-thr;
+    color: $color-placeholder;
+    &::placeholder {
+        color: $color-placeholder;
+    }
+    &:hover {
+        border: 1px solid $color-placeholder;
+    }
+    &:active {
+        background-color: $color-thr;
+        color: $color-placeholder;
+    }
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    &:visited {
+    color: white;
+}   
+}
